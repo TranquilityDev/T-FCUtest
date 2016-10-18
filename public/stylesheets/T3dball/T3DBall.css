@@ -1,0 +1,7 @@
+#T3DBall {position:relative; width:350px; height:450px; margin: 20px auto 0; }
+#T3DBall a {position:absolute; top:0px; left:0px; font-family:  color:#fff; font-weight:bold; text-decoration:none; padding: 3px 6px; }
+#T3DBall a:hover {border: 1px solid #eee; background: #000; }
+/*
+#T3DBall .blue {color:blue;}
+#T3DBall .red {color:red;}
+#T3DBall .yellow {color:yellow;}
