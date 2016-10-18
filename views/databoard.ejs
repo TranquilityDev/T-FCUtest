@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html>
+
+	<head>
+		<title><%= title %></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="stylesheets/Tcss/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- Scripts -->
+		<script src="javascripts/jquery/jquery.min.js"></script>
+		<script src="javascripts/jquery/jquery.scrolly.min.js"></script>
+		<script src="javascripts/jquery/jquery.dropotron.min.js"></script>
+		<script src="javascripts/jquery/jquery.scrollex.min.js"></script>
+		<script src="javascripts/Ttheme/skel.min.js"></script>
+		<script src="javascripts/Ttheme/util.js"></script>
+		<!--[if lte IE 8]><script src="stylesheets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="javascripts/Ttheme/main.js"></script>
+		
+		<!--Dropdown javascript -->
+		<script src="Data/TData.js"></script>
+		<!--D3 function -->	
+		<link href="stylesheets/bootstrap.min.css" rel="stylesheet"/>
+		<script src="javascripts/bootstrap/bootstrap.min.js"></script>
+		<script src="javascripts/d3/d3.js"></script>	
+		<link href="stylesheets/d3/training.css" rel="stylesheet"/>
+		<!--Pie bar function -->
+		<link href="stylesheet/d3/TPieBarGraph.css" rel="stylesheet">
+		<script src="javascripts/d3/TPieBarGraph.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+		<!--Search function -->
+		<script src="javascripts/SearchT/jquery.js"></script>	<!--Why I can't only use jquery to replace jquery.min?? -->
+		<script src="javascripts/SearchT/TSearchT.js"></script>  
+		<!--	<link rel="stylesheet" type="text/css" href="stylesheets/SearchT/style.css" />	-->
+
+
+
+	</head>
+
+	
+	<!--Jus activity header, but why my Tranquility logo is not...in center... lol-->	
+	<div id="page-wrapper">
+
+			<!-- Header -->
+			<% include menu.ejs %> 
+	</div>
+	<!--Main dashboard -->	
+	<body>
+		<h3>  Emotion Analysis</h3>
+	<!--
+		<h3><%= videodata.categoryName %></h3>
+		
+		<ul>
+			<% videodata.categories.forEach(function(item){ %>
+				<li><%= item.categoryName %></li>
+			<%  }); %>	
+		</ul>
+	-->
+	<!--Dropdown function -->
+	<!--
+			<form name="myform" id="myForm">
+			<select name="optone" id="theme" size="1">
+				<option value="" selected="selected">Select Department</option>
+			</select>
+			<br>
+			<select name="opttwo" id="questions" size="1">
+				<option value="" selected="selected">Select Teacher</option>
+			</select>
+			<br>
+			<select name="opttwo" id="questions2" size="1">
+				<option value="" selected="selected">Select Teacher</option>
+			</select>			
+			<br>
+
+			</form>
+			
+	-->		
+
+	<!--Pie bar function -->
+
+        <div id="graph-chart"></div>
+		<script src="Data/TPieBarGraph.js"></script>
+        <script>
+		//AngerConfig
+            var config = {
+                width: 600,
+                height: 350,
+                valueProp: 'value',
+                labelProp: 'name',
+                subProp: 'players',
+                id: '#graph-chart'
+            };
+            var graph = new TChart(config, goalsData);
+			//var graph = new DisgustChart(config, goalsData2);
+        </script>
+
+	
+	<!--Dropdown2 function 
+		
+			<script src='/Data/TChooceTeacher.js'></script>
+			<form name="myform" id="myForm">
+				<select name="optone" id="DepartmentSelect" size="1">
+					<option value="" selected="selected">Select Department</option>
+				</select>
+				<br>
+				<br>
+				<select name="opttwo" id="TeacherSelect" size="1">
+					<option value="" selected="selected">Please select Teacher first</option>
+				</select>
+				<br>
+				<br>
+				<select name="optthree" id="Showdata" size="1">
+					<option value="" selected="selected">Please select county first</option>
+				</select>
+				
+			</form>
+		
+	-->
+
+	<!--D3 function -->		
+
+		<div class='content'>
+		  <h3>Concepts</h3>
+		  <hr/>
+			<div class="row">
+			   <div class="col-md-8"> <span id='tree'></span> </div>
+			   <div class="col-md-4"> <div id='vid-container'> <embed id='vid'/></div>
+			</div>
+		</div>
+	<!--Teacher concept -->	
+
+		<script src='/Data/training-data.js'></script>
+		<script src='/javascripts/d3/training.js'></script>
+	
+	<!--Search Teacher function	-->
+		<input type="text" id="InputSearchTeacher">
+		<div id="SearchT"></div>
+		Not finish X( ,U only can search DIC now, lol 
+		<div id="SearchResult">Result:</div>		
+			
+	<!--Tranquility :) -->			
+			<% include footer.ejs %> 
+
+	</body>
+
+</html>

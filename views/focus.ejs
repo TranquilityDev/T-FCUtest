@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html>
+
+	<head>
+		<title><%= title %></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="stylesheets/Tcss/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- Scripts -->
+		<script src="javascripts/jquery/jquery.min.js"></script>
+		<script src="javascripts/jquery/jquery.scrolly.min.js"></script>
+		<script src="javascripts/jquery/jquery.dropotron.min.js"></script>
+		<script src="javascripts/jquery/jquery.scrollex.min.js"></script>
+		<script src="javascripts/Ttheme/skel.min.js"></script>
+		<script src="javascripts/Ttheme/util.js"></script>
+		<!--[if lte IE 8]><script src="stylesheets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="javascripts/Ttheme/main.js"></script>
+
+	<!-- Tterminal -->
+		<link href="stylesheets/Tterminal/Tterminal.css" rel="stylesheet">
+	<!-- T3DBall -->	
+		<script src="javascripts/T3dball/T3DBall.js"></script>	
+		<link href="stylesheets/T3dball/T3DBall.css" rel="stylesheet">	
+	</head>
+	
+	<!--Jus activity header, but why my Tranquility logo is not...in center... lol-->	
+	<div id="page-wrapper">
+			<!-- Header -->
+			<% include menu.ejs %> 
+	</div>
+	<!--Main dashboard -->	
+	<body>
+		
+
+		<section id="page-wrapper">
+					<% include menu.ejs %> 
+<!--		<div class="window">	-->
+			<h4>Today's TOP 10 Keywords in Taiwan </h4>
+<!--	T 3D Ball	-->		
+			<section class="4u 6u(medium) 10u$(xsmall)">
+				<div id="T3DBall">
+					<a href="#"><%= TWNewsTitle0 %></a>
+					<a href="#"><%= TWNewsTitle1 %></a>
+					<a href="#"><%= TWNewsTitle2 %></a>
+					<a href="#"><%= TWNewsTitle3 %></a>
+					<a href="#"><%= TWNewsTitle4 %></a>
+					<a href="#"><%= TWNewsTitle5 %></a>
+					<a href="#"><%= TWNewsTitle6 %></a>					
+					<a href="#"><%= TWNewsTitle7 %></a>
+					<a href="#"><%= TWNewsTitle8 %></a>
+					<a href="#"><%= TWNewsTitle9 %></a>				
+				</div>
+			</section></br></br></br>		
+
+	<!--	COM TOP 5	-->		
+			<div class="row uniform">	
+				<section class="5u 10u(medium) 12u$(xsmall)">
+					<h4>Today's TOP 5 Keywords in The World</h4></br>
+						<div class="terminal">
+							<p class="command">Tranquility : First Keyword->  <%= COMNewsTitle0 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= COMNewsLink0 %><br />
+								Clicks : <%=COMNewsCtime0 %>
+							  </span>
+							</p>
+							<p class="command">Tranquility : Second Keyword->  <%= COMNewsTitle1 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= COMNewsLink1 %><br />
+								Clicks : <%=COMNewsCtime1 %>
+							  </span>
+							</p>
+							<p class="command">Tranquility : Third Keyword->  <%= COMNewsTitle2 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= COMNewsLink2 %><br />
+								Clicks : <%=COMNewsCtime2 %>
+							  </span>
+							</p>				
+							<p class="command">Tranquility : Fourth Keyword->  <%= COMNewsTitle3 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= COMNewsLink3 %><br />
+								Clicks : <%=COMNewsCtime3 %>
+							  </span>
+							</p>
+							<p class="command">Tranquility : Fifth Keyword->  <%= COMNewsTitle4 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= COMNewsLink4 %><br />
+								Clicks : <%=COMNewsCtime4 %>
+							  </span>
+							</p>			
+						</div>
+				</section>		
+
+
+
+	<!--	TW TOP 5	-->			
+				<section class="7u 10u(medium) 12u$(xsmall)">
+					<h4>Today's TOP 5 Keywords in Taiwan</h4></br>
+						<div class="terminal">
+							<p class="command">Tranquility : First Keyword->  <%= TWNewsTitle0 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= TWNewsLink0 %><br />
+								Clicks : <%=TWNewsCtime0 %>
+							  </span>
+							</p>
+							<p class="command">Tranquility : Second Keyword->  <%= TWNewsTitle1 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= TWNewsLink1 %><br />
+								Clicks : <%=TWNewsCtime1 %>
+							  </span>
+							</p>
+							<p class="command">Tranquility : Third Keyword->  <%= TWNewsTitle2 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= TWNewsLink2 %><br />
+								Clicks : <%=TWNewsCtime2 %>
+							  </span>
+							</p>				
+							<p class="command">Tranquility : Fourth Keyword->  <%= TWNewsTitle3 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= TWNewsLink3 %><br />
+								Clicks : <%=TWNewsCtime3 %>
+							  </span>
+							</p>
+							<p class="command">Tranquility : Fifth Keyword->  <%= TWNewsTitle4 %></p>
+							<p class="log">
+							  <span>
+								Link: <%= TWNewsLink4 %><br />
+								Clicks : <%=TWNewsCtime4 %>
+							  </span>
+							</p>			
+						</div>
+				</section>	
+			</div>	
+			
+<!--		</div>	-->
+
+	<!--Tranquility :) -->			
+	</body>
+			<% include footer.ejs %>
+</html>

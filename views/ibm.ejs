@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html>
+
+	<head>
+		<title><%= title %></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="stylesheets/Tcss/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- Scripts -->
+		<script src="javascripts/jquery/jquery.min.js"></script>
+		<script src="javascripts/jquery/jquery.scrolly.min.js"></script>
+		<script src="javascripts/jquery/jquery.dropotron.min.js"></script>
+		<script src="javascripts/jquery/jquery.scrollex.min.js"></script>
+		<script src="javascripts/Ttheme/skel.min.js"></script>
+		<script src="javascripts/Ttheme/util.js"></script>
+		<!--[if lte IE 8]><script src="stylesheets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="javascripts/Ttheme/main.js"></script>
+	</head>
+
+	
+	<!--Jus activity header, but why my Tranquility logo is not...in center... lol-->	
+	<div id="page-wrapper">
+
+			<!-- Header -->
+			<% include menu.ejs %> 
+	</div>
+	<!--Main dashboard -->	
+	<body>
+	</br>
+	<form action='/ibm' method='post' >
+		<h1>Input ur data</h1></br>
+		<input type='text' name='name' placeholder="Input ur data in here, English Only !!!     :)"></br>
+		<input type='submit' value='Submit'>
+	
+	</form></br></br>
+			<div class="row uniform">	
+				<section class="6u 10u(medium) 12u$(xsmall)">
+					<h4>Article Analysis</h4>
+					<h1>Use IBM database to analyze</h1></br>
+					--> I guess u r talking about : <%= TConceptR %></br>
+					--> Anger: <%= TEmotionAnger %></br>
+					--> Disgust: <%= TEmotionDisgust %></br>
+					--> Fear: <%= TEmotionFear %></br>
+					--> Joy: <%= TEmotionJoy %></br>
+					--> Sadness: <%= TEmotionSadness %></br>
+					</br></br>
+					
+				</section>		
+
+			</div>	
+			
+
+
+	<!--Tranquility :) -->			
+			<% include footer.ejs %> 
+
+	</body>
+
+</html>
